@@ -1,0 +1,20 @@
+.listdag__container_sec {
+    padding: 2rem;
+    min-height: 70vh;
+  }
+  
+.listdag__header_sec h2 {
+  color: #fff !important;
+  font-size: xx-large;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.spinner_sec {
+  padding-top: 2rem;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+

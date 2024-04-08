@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  airflow-api:
+    build: ./airflow-backend
+    command: >
+      sh -c "python manage.py makemigrations &&
+            python manage.py migrate &&
+             python manage.py loaddata seed_db_data.json &&
+            python manage.py runserver 0.0.0.0:8000"
+    container_name: airflow_be
+    ports:
+      - "8000:8000"
+
+  airflow-app:
+    build: ./airflow-frontend
+    container_name: airflow_fe
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000/api/

@@ -1,0 +1,14 @@
+.listdag__container_sec {
+  padding: 2rem;
+}
+  
+.sub_header_text, .divider_sec {
+  color: #fff;
+  font-size: x-large;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.button_wrapper {
+  margin-bottom: 1rem;
+}

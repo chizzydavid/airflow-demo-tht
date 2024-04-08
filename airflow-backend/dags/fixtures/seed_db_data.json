@@ -1,0 +1,75 @@
+[
+  {
+    "model": "dags.Dag",
+    "pk": 1,
+    "fields": {
+      "dag_id": "demo_dag_seed",
+      "description": "An example DAG for demonstration purposes",
+      "owner": "John Doe",
+      "schedule_interval": "daily",
+      "schedule_interval_cron": "0 0 * * *",
+      "executor": "kubernetes_executor",
+      "contact_email": "john.doe@example.com",
+      "start_date": "2024-04-01",
+      "retry_delay": 3600,
+      "allowed_retries": 3,
+      "catch_up": false,
+      "email_on_retry": true,
+      "email_on_failure": true,
+      "last_run_status": "success",
+      "last_run_ts": "2024-04-06T07:37:22.143497Z",
+      "next_run_ts": "2024-04-07T07:37:22.992437Z",
+      "created_date": "2024-04-08T07:37:22.515997Z",
+      "updated_date": "2024-04-08T07:37:22.516025Z"
+    }
+  },
+  {
+    "model": "dags.Task",
+    "pk": 1,
+    "fields": {
+      "task_id": "demo_task_one",
+      "dag_id": "1",
+      "description": "An example Task to demo workflow on aiflow: one",
+      "operator": "bash_operator",
+      "depends_on": "",
+      "code_snippet": "<h1> Run Code One </h1>",
+      "last_run_status": "deferred",
+      "last_run_ts": "2024-04-06T07:37:22.143497Z",
+      "created_date": "2024-04-08T07:37:22.515997Z",
+      "updated_date": "2024-04-08T07:37:22.516025Z"
+    }
+  },
+  {
+    "model": "dags.Task",
+    "pk": 2,
+    "fields": {
+      "task_id": "demo_task_two",
+      "dag_id": "1",
+      "description": "An example Task to demo workflow on aiflow: two",
+      "operator": "bash_operator",
+      "depends_on": "demo_task_one",
+      "code_snippet": "<h1> Run Code Two </h1>",
+      "last_run_status": "deferred",
+      "last_run_ts": "2024-04-06T07:37:22.143497Z",
+      "created_date": "2024-04-08T07:37:22.515997Z",
+      "updated_date": "2024-04-08T07:37:22.516025Z"
+    }
+  },
+  {
+    "model": "dags.Task",
+    "pk": 3,
+    "fields": {
+      "task_id": "demo_task_three",
+      "dag_id": "1",
+      "description": "An example Task to demo workflow on aiflow: three",
+      "operator": "email_operator",
+      "depends_on": "demo_task_one",
+      "code_snippet": "<h1> Run Code Three</h1>",
+      "last_run_status": "skipped",
+      "last_run_ts": "2024-04-06T07:41:38.143497Z",
+      "created_date": "2024-04-08T07:41:38.515997Z",
+      "updated_date": "2024-04-08T07:41:38.516025Z"
+    }
+  }
+]
+
