@@ -14,7 +14,7 @@ Airflow application featuring workflow creation as DAGs (Directed Acyclic Graphs
 You need to have the following tools installed on your machine:
 
 * Docker
-* Docker Dompose
+* Docker Compose
 * Web Browser
 
 
